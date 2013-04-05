@@ -8,7 +8,7 @@ end
 
 task :publish do
   NAME = 'appsignal-mongo'
-  VERSION_FILE = 'lib/appsignal_mongo/version.rb'
+  VERSION_FILE = 'lib/appsignal/mongo/version.rb'
 
   unless ENV['EDITOR']
     raise "$EDITOR should be set to an editor\n"\
