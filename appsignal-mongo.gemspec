@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary       = 'Add instrument calls to mongodb queries '\
                     'made with mongo. For use with Appsignal.'
   s.description   = 'Wrap all mongo queries with'\
-                    'ActiveSupport::Notifications.instrument calls.'\
+                    'ActiveSupport::Notifications.instrument calls. '\
                     'For use with Appsignal.'
   s.files         = Dir.glob('lib/**/*') + %w(README.md)
 
