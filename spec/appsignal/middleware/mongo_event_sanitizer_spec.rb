@@ -21,7 +21,7 @@ describe Appsignal::Middleware::MongoEventSanitizer do
       before { @db[:users].insert({:name => 'test'}) }
 
       it { should == {
-        :insert => {
+        "insert in 'users'" => {
           :database => 'mongo_test',
           :collection => 'users',
           :documents => [{
@@ -42,7 +42,7 @@ describe Appsignal::Middleware::MongoEventSanitizer do
       end
 
       it { should == {
-        :find => {
+        "find in 'users'" => {
           :database => 'mongo_test',
           :collection => 'users',
           :selector => {:name => '?'},
@@ -58,7 +58,7 @@ describe Appsignal::Middleware::MongoEventSanitizer do
       end
 
       it { should == {
-        :update => {
+        "update in 'users'" => {
           :database => 'mongo_test',
           :collection => 'users',
           :selector => {:name => '?'},
@@ -73,7 +73,7 @@ describe Appsignal::Middleware::MongoEventSanitizer do
       end
 
       it { should == {
-        :remove => {
+        "remove in 'users'" => {
           :database => 'mongo_test',
           :collection => 'users',
           :selector => {:name => '?'},

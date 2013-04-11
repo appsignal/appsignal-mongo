@@ -6,10 +6,10 @@ module Appsignal
       private
 
       def instrument_with_appsignal_instrumentation(name, payload={}, &block)
-        ActiveSupport::Notifications.instrument(
-          EVENT_NAME, name => payload) do
-            instrument_without_appsignal_instrumentation(name, payload, &block)
-          end
+        appsignal_payload = {"#{name} in '#{payload[:collection]}'" => payload}
+        ActiveSupport::Notifications.instrument(EVENT_NAME, appsignal_payload) do
+          instrument_without_appsignal_instrumentation(name, payload, &block)
+        end
       end
 
     end

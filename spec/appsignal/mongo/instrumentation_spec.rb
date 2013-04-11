@@ -18,7 +18,7 @@ describe Appsignal::Mongo::Instrumentation do
     before { @db[:users].insert({:name => 'test'}) }
 
     it { should == {
-      :insert => {
+      "insert in 'users'" => {
         :database => 'mongo_test',
         :collection => 'users',
         :documents => [{
@@ -33,7 +33,7 @@ describe Appsignal::Mongo::Instrumentation do
     before { @db[:users].find(:name => 'Pete').to_a }
 
     it { should == {
-      :find => {
+      "find in 'users'" => {
         :database => 'mongo_test',
         :collection => 'users',
         :selector => {:name => 'Pete'}
