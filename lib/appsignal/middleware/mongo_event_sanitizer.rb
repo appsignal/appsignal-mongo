@@ -1,7 +1,7 @@
 module Appsignal
   module Middleware
     class MongoEventSanitizer
-      WHITELISTED_TOP_LEVEL_KEYS = [:fields, :order]
+      WHITELISTED_TOP_LEVEL_KEYS = [:fields, :order].freeze
 
       def call(event)
         if target?(event)

@@ -1,7 +1,7 @@
 module Appsignal
   module Mongo
     module Instrumentation
-      EVENT_NAME = 'query.mongodb'
+      EVENT_NAME = 'query.mongodb'.freeze
 
       private
 
