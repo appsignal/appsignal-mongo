@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'mongo', '> 1.5'
   s.add_dependency 'activesupport', '~>3'
-  s.add_dependency 'appsignal', '~>0.5.0.beta1'
+  s.add_dependency 'appsignal', '~>0.5.0'
 
   s.add_development_dependency 'bson_ext'
   s.add_development_dependency 'rake'
