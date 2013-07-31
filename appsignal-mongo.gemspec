@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'activesupport'
   s.add_dependency 'appsignal'
 
-  s.add_development_dependency 'bson_ext'
+  s.add_development_dependency 'bson_ext' unless RUBY_PLATFORM == 'java'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'pry'
