@@ -10,6 +10,8 @@ Gem::Specification.new do |s|
   s.email         = %w{contact@appsignal.com}
 
   s.homepage      = 'https://github.com/appsignal/appsignal-mongo'
+  s.license       = 'MIT'
+
   s.summary       = 'Add instrument calls to mongodb queries '\
                     'made with mongo. For use with Appsignal.'
   s.description   = 'Wrap all mongo queries with'\
