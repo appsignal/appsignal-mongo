@@ -1,5 +1,4 @@
 require 'mongo'
-require 'rails'
 require 'appsignal'
 require 'appsignal/mongo/instrumentation'
 require 'appsignal/middleware/mongo_event_sanitizer'

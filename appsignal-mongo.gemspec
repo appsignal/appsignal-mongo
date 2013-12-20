@@ -21,9 +21,8 @@ Gem::Specification.new do |s|
 
   s.require_path  = 'lib'
 
+  s.add_dependency 'appsignal', '> 0.7'
   s.add_dependency 'mongo'
-  s.add_dependency 'activesupport'
-  s.add_dependency 'appsignal'
 
   s.add_development_dependency 'bson_ext' unless RUBY_PLATFORM == 'java'
   s.add_development_dependency 'rake'
