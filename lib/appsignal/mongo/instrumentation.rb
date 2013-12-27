@@ -11,7 +11,7 @@ module Appsignal
           result
         when Array
           value.map { |v| deep_clone(v) }
-        when Symbol, Numeric, true, false, nil
+        when Symbol, Numeric, Regexp, true, false, nil
           value
         else
           value.clone
